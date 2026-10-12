@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --olive-wood: #7a6c5d;
+    --charcoal-blue: #2a3d45;
+    --pale-oak: #ddc9b4;
+    --khaki-beige: #bcac9b;
+    --dusty-rose: #c17c74;
+    
+    --bg-main: #ffffff;
+    --bg-surface: #f9f9f9;
+    --text-main: var(--charcoal-blue);
+    --border-line: var(--khaki-beige);
+}
+
+[data-theme="dark"] {
+    --bg-main: #1a2226;
+    --bg-surface: var(--charcoal-blue);
+    --text-main: var(--pale-oak);
+    --border-line: var(--olive-wood);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Jost', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, .brand-font { font-family: 'Josefin Sans', sans-serif; }
+
+.btn-primary {
+    background-color: var(--charcoal-blue); color: white;
+    padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer;
+    font-family: 'Ubuntu', sans-serif; transition: 0.2s;
+}
+.btn-primary:hover { background-color: var(--olive-wood); }
+
+.modern-table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    border-radius: 12px; overflow: hidden; border: 1px solid var(--border-line);
+    background-color: var(--bg-surface);
+}
+.modern-table th { background-color: var(--olive-wood); color: white; padding: 16px; text-align: left; }
+.modern-table td { padding: 16px; border-bottom: 1px solid var(--border-line); }
+.modern-table tr:last-child td { border-bottom: none; }
+
+.app-layout { display: flex; height: 100vh; overflow: hidden; }
+.sidebar {
+    width: 260px; background-color: var(--bg-surface);
+    border-right: 1px solid var(--border-line); padding: 24px;
+    display: flex; flex-direction: column;
+}
+.sidebar a {
+    display: flex; align-items: center; padding: 12px; margin-bottom: 8px;
+    border-radius: 8px; color: var(--text-main); text-decoration: none; font-family: 'Lora', serif;
+}
+.sidebar a:hover { background-color: var(--pale-oak); color: var(--charcoal-blue); }
+.main-content { flex: 1; display: flex; flex-direction: column; overflow-y: auto; }
+.topbar {
+    height: 70px; padding: 0 30px; display: flex; justify-content: flex-end; align-items: center;
+    border-bottom: 1px solid var(--border-line); background-color: var(--bg-surface);
+}

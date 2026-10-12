@@ -1,0 +1,5 @@
+REGLAS DE PRÉSTAMO E INFORMACIÓN:
+- Rol Solicitante: Solo puede solicitar, ver disponibilidad, y reportar incidencias.
+- Rol Encargado: Administra inventario, aprueba solicitudes y gestiona reportes.
+- Un equipo marcado como 'prestado' o 'dañado' no puede ser solicitado.
+- Interfaz: Paleta de colores cálida (olive-wood, charcoal-blue), modo oscuro persistente, iconos SVG, sin degradados y tablas redondeadas.
